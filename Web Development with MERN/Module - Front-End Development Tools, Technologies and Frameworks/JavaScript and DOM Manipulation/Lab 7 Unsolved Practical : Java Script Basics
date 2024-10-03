@@ -4,3 +4,48 @@ Unsolved Practical:  Create a simple JavaScript program that simulates a basic p
 •	Log all the variables to the console.
 •	Display a summary of the information on the webpage using document.write.
 •	Include comments to explain each part of the code
+
+// Declare variables to store personal information
+
+// Name (string)
+let name = "John Doe";
+
+// Age (number)
+let age = 30;
+
+// Favorite color (string)
+let favoriteColor = "Blue";
+
+// Favorite hobbies (array)
+let favoriteHobbies = ["Reading", "Hiking", "Coding"];
+
+// Log variables to the console
+console.log("Name:", name);
+console.log("Age:", age);
+console.log("Favorite Color:", favoriteColor);
+console.log("Favorite Hobbies:", favoriteHobbies);
+
+// Display summary on webpage using document.write
+document.write("<h1>Personal Information</h1>");
+document.write("<p>Name: " + name + "</p>");
+document.write("<p>Age: " + age + "</p>");
+document.write("<p>Favorite Color: " + favoriteColor + "</p>");
+document.write("<p>Favorite Hobbies: " + favoriteHobbies.join(", ") + "</p>");
+
+
+
+Explanation:
+
+1. Variable declarations:
+    - name: string (text)
+    - age: number (integer)
+    - favoriteColor: string (text)
+    - favoriteHobbies: array (list of strings)
+
+2. Logging variables to the console:
+    - console.log() function displays values in browser's console
+
+3. Displaying summary on webpage:
+    - document.write() function writes HTML content to webpage
+    - Concatenation (+) combines strings and variables
+    - join() method converts array to comma-separated string
