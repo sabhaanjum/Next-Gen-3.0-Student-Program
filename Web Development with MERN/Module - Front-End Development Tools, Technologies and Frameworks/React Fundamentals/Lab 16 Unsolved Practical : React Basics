@@ -1,1 +1,47 @@
 Unsolved Practical: Create a react project and do some JS operations  
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+
+function App() {
+  const [num1, setNum1] = useState(0);
+  const [num2, setNum2] = useState(0);
+  const [result, setResult] = useState(0);
+
+  const handleAdd = () => {
+    setResult(num1 + num2);
+  };
+
+  const handleSubtract = () => {
+    setResult(num1 - num2);
+  };
+
+  const handleMultiply = () => {
+    setResult(num1 * num2);
+  };
+
+  const handleDivide = () => {
+    if (num2 !== 0) {
+      setResult(num1 / num2);
+    } else {
+      alert("Cannot divide by zero!");
+    }
+  };
+
+  return (
+    <div className="App">
+      <h1>Simple Calculator</h1>
+      <input type="number" value={num1} onChange={(e) => setNum1(Number(e.target.value))} />
+      <input type="number" value={num2} onChange={(e) => setNum2(Number(e.target.value))} />
+      <button onClick={handleAdd}>+</button>
+      <button onClick={handleSubtract}>-</button>
+      <button onClick={handleMultiply}>*</button>
+      <button onClick={handleDivide}>/</button>
+      <p>Result: {result}</p>
+    </div>
+  );
+}
+
+export default App
+
